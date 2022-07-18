@@ -1,6 +1,7 @@
 import json
 
 lista=[]
+print("\n" "..............WELCOME..............")
 x = input ("inserire un valore: ")
 y = json.dumps(x)
 lista.append(y)
@@ -20,7 +21,11 @@ while insert < 5:
 print (lista)
 carica = 0
 while carica <len(lista):
-    o = int(input ("inserire la posizione del'elemento della lista da caricare: "))
-    p = json.loads(lista[o])
-    print (p)
-    carica = carica +1
+    position = int(input ("inserire la posizione del'elemento della lista da caricare: "))
+    if (position < len(lista)):
+        p = json.loads(lista[position])
+        print (p)
+    else:
+        print ("ERROR 404")
+    carica = carica +1 
+    
