@@ -10,7 +10,7 @@ class person():
 class docente(person):
     #se voglio agguingere un altro campo per studente posso fare una altro init
     def _init_(self, fname, lname, year):
-        super._init_(self, fname, lname)
+        person._init_(self, fname, lname)
         self.my_year=year
 
     def printname (self):
@@ -19,7 +19,7 @@ class docente(person):
 
 class studente(docente):
     def _int_(self, fname, lname, year, media):
-        super._init_(self,fname, lname, year)
+        docente._init_(self,fname, lname, year)
         self.average= media
 
     def printname (self):
